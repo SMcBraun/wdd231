@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sina McBraun | WDD 231 Course Home</title>
+
+    <meta name="description"
+        content="WDD 231 Course Home Page for Sina McBraun featuring web development projects and coursework.">
+
+    <meta name="author" content="Sina McBraun">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/home.svg" alt="Site Logo" width="512" height="512">
+        <span>Sina McBraun</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="chamber/">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+
+    </nav>
+
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                My name is Sina McBraun, and I am currently pursuing my second degree through BYU–Idaho's Software
+                Development
+                program. As a nontraditional student, software development was never something I imagined pursuing
+                earlier in
+                life. Throughout my career, I have worked in fast-paced environments where I learned to adapt quickly,
+                analyze
+                complex situations, and help improve processes so work could run more smoothly. Those experiences
+                inspired me
+                to continue my education and strengthen technical skills that challenge me to grow. My goal is to expand
+                my
+                knowledge, build a strong foundation in software development, and create new opportunities for both my
+                professional career and personal growth.
+            </p>
+            </p>
+
+        </section>
+
+        <section class="photo">
+            <h2>Student Photo</h2>
+            <img src="images/profile.jpg" alt="Photo of Sina McBraun">
+        </section>
+
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="course-buttons">
+                <button id="all">All</button>
+                <button id="wdd">WDD</button>
+                <button id="cse">CSE</button>
+            </div>
+
+            <div id="course-cards"></div>
+
+            <p id="credits"></p>
+        </section>
+
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/sinamcbraun" target="_blank">
+                <img src="images/facebook.svg" alt="facebook" width="16" height="16">
+            </a>
+
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <img src="images/github.svg" alt="github" width="16" height="16">
+            </a>
+
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <img src="images/linkedin.svg" alt="linkedin" width="16" height="16">
+            </a>
+
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <img src="images/twitter-x.svg" alt="twitter-x" width="16" height="16">
+            </a>
+        </div>
+
+        <p>&copy; <span id="currentyear"></span> • Sina McBraun • Hawaii, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+
+
+</body>
+
+
+</html>
