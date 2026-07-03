@@ -7,7 +7,7 @@ deep slate blue #3D405B
 /*************** SITE WIDE ***************/
 
 * {
-    font-family: "Josefina Sans", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     box-sizing: border-box;
 }
 
@@ -99,9 +99,6 @@ header span {
     color: white;
 }
 
-h1 {
-    margin-left: 10px;
-}
 
 
 /*************** WEB CERTIFICATE COURSE ***************/
