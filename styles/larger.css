@@ -31,6 +31,11 @@
         border: none;
     }
 
+    .navigation li {
+        flex: 1;
+        text-align: center;
+    }
+
     main {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -46,21 +51,17 @@
 
     }
 
-    .about,
-    .photo,
-    .courses {
-        border: 1px solid #ddd;
-        padding: 1rem;
+
+
+
+    #course-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .75rem;
     }
 
-    .about h2,
-    .photo h2,
-    .courses h2 {
-        background-color: #3D405B;
-        color: white;
-        text-align: center;
-        padding: .5rem;
-        margin: -1rem -1rem 1rem -1rem;
+    .course-card {
+        margin: 0;
     }
 
 }
