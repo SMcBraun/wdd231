@@ -7,25 +7,50 @@
 
     <title>Waianae Chamber of Commerce| Directory</title>
 
+
     <meta name="description" content="Directory of businesses that are members of Waianae Chamber of Commerce.">
     <meta name="author" content="Sina McBraun">
 
-    <link rel="icon" href="images/favicon.ico">
+
+    <!-- ---------- OPEN GRAPH SOCIAL MEDIA ---------- -->
+
+    <meta property="og:title" content="Waianae Chamber of Commerce Directory">
+    <meta property="og:description" content="Directory of businesses in the Waianae Chamber of Commerce.">
+    <meta property="og:image" content="https://smcbraun.github.io/wdd231/chamber/images/logo.svg">
+    <meta property="og:url" content="https://smcbraun.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- ---------- FAVICON ---------- -->
+
+    <link rel="icon" href="images/waianae-favicon.ico">
+
+    <!-- ---------- STYLESHEETS ---------- -->
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!-- ---------- JAVASCRIPT ---------- -->
 
     <script src="scripts/directory.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+
+
 </head>
 
 <body>
+
+    <!-- ---------- HEADER ---------- -->
     <header>
-        <img src="images/logo.svg" alt="Waiʻanae Chamber of Commerce Logo" width="64" height="64">
-        <span>Waiʻanae Chamber of Commerce</span>
-        <button id="ham-btn" class="hamburger" aria-label="Navigation menu"></button>
+        <img src="images/waianae-favicon.ico" alt="Waiʻanae Chamber of Commerce Logo" width="64" height="64">
+
+        <span>Waianae Chamber of Commerce</span>
+
+        <button id="ham-btn" class="hamburger" type="button" aria-label="Open Navigation menu"></button>
     </header>
+
+
+    <!-- ---------- NAVIGATION ---------- -->
 
     <nav id="nav-bar">
         <ul>
@@ -38,14 +63,50 @@
 
     </nav>
 
+
+    <!-- ---------- MAIN CONTENT ---------- -->
+
     <main>
         <h1>Business Directory</h1>
+
+
+        <div class="view-buttons">
+            <button id="grid" type="button" aria-label="Display members in grid view">
+                Grid
+            </button>
+
+            <button id="list" type="button" aria-label="Display members in list view">
+                List
+            </button>
+
+
+        </div>
+
+        <section id="members" class="grid" aria-label="Chamber member directory">
+
+        </section>
+
     </main>
 
+    <!-- ---------- FOOTER ---------- -->
+
+
     <footer>
-        <p>Waiʻanae Chamber of Commerce</p>
-        <p>Sina McBraun | WDD 231</p>
-        <p id="lastModified"></p>
+        <div class="chamber-contact">
+            <p><strong>Waianae Chamber of Commerce</strong></p>
+            <p>Waianae, Hawaii 96792</p>
+            <p>(808) 808-5678</p>
+        </div>
+
+
+        <div class="development-info">
+            <p>
+                &copy; <span id="currentYear"></span>
+                Waianae Chamber of Commerce
+            </p>
+            <p>Sina McBraun | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 

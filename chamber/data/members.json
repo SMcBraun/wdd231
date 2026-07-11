@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Lilikoi Lounge LLC",
+        "address": "84-627 Makaha Valley Road, Waianae, HI 96792",
+        "phone": "(808) 427-5099",
+        "website": "https://www.lilikoiloungehi.com",
+        "image": "lilikoi-lounge.webp",
+        "membership": 3,
+        "description": "Local restaurant serving Hawaiian-inspired cuisine, handcrafted cocktails, and live entertainment."
+    },
+    {
+        "name": "Waianae Korean BBQ",
+        "address": "85-910 Farrington Highway, Waianae, HI 96792",
+        "phone": "(808) 369-7704",
+        "website": "https://waianaekoreanbbq.square.site",
+        "image": "waianae-korean-bbq.webp",
+        "membership": 2,
+        "description": "Family-owned Korean restaurant featuring traditional barbecue and local favorites."
+    },
+    {
+        "name": "Countryside Cafe",
+        "address": "87-070 Farrington Hwy #104, Waianae, HI 96792",
+        "phone": "(808) 888-5448",
+        "website": "https://www.countrysidecafe808.net",
+        "image": "countryside-cafe.webp",
+        "membership": 3,
+        "description": "Family-owned breakfast and lunch restaurant serving local Hawaiian favorites and classic American dishes."
+    },
+    {
+        "name": "Ohana Ola O Kahumana",
+        "address": "86-704 Lualualei Homestead Road, Waianae, HI 96792",
+        "phone": "(808) 696-4095",
+        "website": "https://www.kahumana.org",
+        "image": "ohana-ola.webp",
+        "membership": 3,
+        "description": "Nonprofit organization providing housing, education, farming, and vocational opportunities for the community."
+    },
+    {
+        "name": "Waianae Neighborhood Place",
+        "address": "85-251 Farrington Highway, Waianae, HI 96792",
+        "phone": "(808) 696-5667",
+        "website": "https://www.parentsandchildrentogether.org",
+        "image": "waianae-neighborhood-place.webp",
+        "membership": 2,
+        "description": "Family resource center connecting residents with education, health, and support services."
+    },
+    {
+        "name": "U.S. VETS Waianae",
+        "address": "85-638 Farrington Highway, Waianae, HI 96792",
+        "phone": "(808) 271-4316",
+        "website": "https://usvets.org",
+        "image": "us-vets.webp",
+        "membership": 3,
+        "description": "Veteran support organization providing housing, employment assistance, and supportive services."
+    },
+    {
+        "name": "Boys & Girls Club of Hawaii - Waianae Clubhouse",
+        "address": "85-165 Plantation Road, Waianae, HI 96792",
+        "phone": "(808) 696-2754",
+        "website": "https://www.bgch.com",
+        "image": "bgc-waianae.webp",
+        "membership": 2,
+        "description": "Youth development organization providing after-school programs, leadership, and academic support."
+    }
+]

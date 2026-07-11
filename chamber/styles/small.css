@@ -1,11 +1,22 @@
 /* ---------- WAIANAE CHAMBER SMALL VIEW ---------*/
+
+
+
+/* ---------- WAIANAE CHAMBER COLOR PALETTE ---------*/
+
+
 :root {
-    --primary-color: #0b4f8a;
-    --secondary-color: #b22234;
-    --background-color: #f4f1ea;
-    --text-color: #222;
+    --primary-color: #0b3d63;
+    --secondary-color: #176b87;
+    --background-color: #f4efe6;
+    --text-color: #1f2933;
     --accent-color: #ffffff;
+    --highlight-color: #d4a017;
+    --border-color: #d8d4cc;
 }
+
+
+/* ---------- GLOBAL STYLES ---------*/
 
 * {
     box-sizing: border-box;
@@ -17,6 +28,11 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
 }
+
+
+
+
+/* ---------- HEADER ---------*/
 
 header {
     display: grid;
@@ -38,6 +54,11 @@ header span {
     color: var(--primary-color);
 }
 
+
+
+/* ---------- HAMBURGER BUTTON ---------*/
+
+
 .hamburger {
     width: 44px;
     height: 44px;
@@ -51,6 +72,10 @@ header span {
     font-size: 1.8rem;
     color: var(--primary-color);
 }
+
+
+/* ---------- NAVIGATION ---------*/
+
 
 nav {
     background-color: var(--primary-color);
@@ -70,10 +95,32 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover,
-nav a.active {
+
+/* ----------  NAVIGATION INTERACTION ----------*/
+
+nav a:hover {
     background-color: var(--secondary-color);
 }
+
+
+nav a.active {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* ---------- MOBILE NAVIGATION ---------- */
+
+#nav-bar {
+    display: none;
+}
+
+#nav-bar.open {
+    display: block;
+}
+
+/* ---------- MAIN CONTENT ---------*/
+
 
 main {
     padding: 1rem;
@@ -86,9 +133,87 @@ h1 {
     font-size: 2rem;
 }
 
+
+/* ---------- FOOTER ---------*/
+
+
 footer {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--accent-color);
     text-align: center;
     padding: 1.5rem 1rem;
+}
+
+/* -------------- DIRECTORY VIEW BUTTONS--------------- */
+
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+
+
+.view-buttons button {
+    padding: .75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.view-buttons button:hover {
+    background-color: var(--primary-color);
+}
+
+
+/* ---------- DIRECTORY GRID ---------*/
+
+#members.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+
+
+/* ---------------- MEMBER CARDS ---------- */
+
+.member-card {
+    background-color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.member-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+/* ----------------- DIRECToRY LIST VIEW ---------------*/
+
+
+#members.list {
+    display: block;
+}
+
+#members.list .member-card {
+    text-align: left;
+    margin-bottom: .75rem;
 }
