@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="logo-title logo-description">
+
+    <title id="logo-title">Waianae Chamber of Commerce Logo</title>
+    <desc id="logo-description">
+        A blue and gold circular logo featuring the letter W.
+    </desc>
+
+    <rect width="512" height="512" rx="80" fill="#0b3d63"></rect>
+
+    <circle cx="256" cy="256" r="170" fill="#d4a017"></circle>
+
+    <path d="M120 165 L175 355 L235 220 L277 355 L392 165" fill="none" stroke="#ffffff" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
