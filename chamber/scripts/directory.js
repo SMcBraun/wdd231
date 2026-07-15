@@ -72,7 +72,7 @@ function displayMembers(members) {
             Visit Website
             </a>
 
-            <p>${member.description}</p>
+            <p class="member-description">${member.description}</p>
             <p>Membership Level: ${getMembershipLevel(member.membership)}</p>
         `;
 
