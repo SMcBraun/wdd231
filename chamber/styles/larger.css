@@ -51,6 +51,34 @@
         display: none;
     }
 
+    /* --------------- HOME PAGE GRID LAYOUT (LARGE VIEW) --------------*/
+    .home-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* --------------- HERO TO EXPAND ACROSS BOTH COLUMNS AT THE TOP --------------*/
+    .hero-box {
+        grid-column: 1 / -1;
+    }
+
+    /* --------------- SPOTLIGHT SECTION WILL EXPAND ACROSS THE BOTTOM --------------*/
+    .spotlight-section {
+        grid-column: 1 / -1;
+
+    }
+
+    /* --------------- SIDE BY SIDE SPOTLIGHT CARDS --------------*/
+
+    .spotlight-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
 
     /* ---------------DIRECTORY GRID CARD RESET --------------*/
     /* Returns the card to grid view after List is selected.*/
