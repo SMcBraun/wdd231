@@ -1,3 +1,17 @@
+/* --------------- MOBILE NAVIGATION ---------------*/
+
+const hamButton = document.querySelector(#ham - btn");
+const navBar = document.querySelector(#nav - bar);
+
+if (hamButton && navBar) {
+    hamButton.addEventListener("click", () => {
+        hamButton.classList.toggle("open");
+        navBar.classList.toggle("open");
+
+    });
+}
+
+/* --------------- WEATHER API ---------------*/
 
 const apiKey = "80ce5061ef0bbbb84e9a25ed81fd191a";
 
