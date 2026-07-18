@@ -1,7 +1,7 @@
 /* --------------- MOBILE NAVIGATION ---------------*/
 
-const hamButton = document.querySelector(#ham - btn");
-const navBar = document.querySelector(#nav - bar);
+const hamButton = document.querySelector("#ham-btn");
+const navBar = document.querySelector("#nav-bar");
 
 if (hamButton && navBar) {
     hamButton.addEventListener("click", () => {
