@@ -290,8 +290,10 @@ footer {
     text-align: center;
     background-color: var(--background-color);
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 30%;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    border: 1px solid #666;
 
 }
 
@@ -328,7 +330,7 @@ footer {
     transition: transforms 0.2s ease;
 }
 
-.spotlight-card::hover {
+.spotlight-card:hover {
     transform: translateY(-3px);
 }
 
@@ -344,7 +346,7 @@ footer {
     max-height: 80px;
     width: auto;
     object-fit: contain;
-    margin-bottom: 0.5rem auto 1rem auto;
+    margin: 0.5rem auto 1rem;
     display: block;
 }
 

@@ -55,9 +55,9 @@ async function getSpotlights() {
     container.innerHTML = "";
 
     selected.forEach(member => {
-        let level = "Silver";
+        let level = "🥈 Silver";
         if (member.membership === 3) {
-            level = "Gold";
+            level = "🥇 Gold";
         }
 
 
@@ -67,7 +67,7 @@ async function getSpotlights() {
             <img src="images/${member.image}" alt="${member.name}" width="100">
             <p>${member.phone}</p>
             <p>${member.address}</p>
-            <p><a href="${member.website}" target='_blank">Website</a></p>
+            <p><a href="${member.website}" target="_blank">Website</a></p>
             <p><strong>${level} Member</strong></p>
 
         </div>
@@ -77,6 +77,3 @@ async function getSpotlights() {
 
 getWeatherData();
 getSpotlights();
-`
-
-
