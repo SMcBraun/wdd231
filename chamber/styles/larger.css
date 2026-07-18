@@ -202,13 +202,13 @@
 
     .spotlight-card {
         box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
-        transition: transform .25s ease;
-        box-shadow: .25s ease;
+        transition: transform .25s ease, box-shadow .25s ease;
+
 
     }
 
     .spotlight-card:hover {
-        transform: translate(-6px);
+        transform: translateY(-6px);
         box-shadow: 0 14px 28px rgba(0, 0, 0, .25);
     }
 
