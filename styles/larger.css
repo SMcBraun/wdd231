@@ -52,7 +52,7 @@
     }
 
 
-
+    /*--------------------COURSE CARDS--------------------*/
 
     #course-cards {
         display: grid;
@@ -61,7 +61,65 @@
     }
 
     .course-card {
-        margin: 0;
+        padding: 1rem;
+        border: 1px solid rgb(0 0 0 / 15%);
+        border-radius: 8px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
     }
 
+    .course-card:hover {
+        cursor: pointer;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgb(0 0 0 / 25%);
+        border-color: #005f73;
+    }
+
+    .course-card:focus {
+        outline: 3px solid #f4c542;
+        outline-offset: 3px;
+    }
+
+    .course-card.completed {
+        font-weight: bold;
+    }
+
+    .course-list li:hover {
+        cursor: pointer;
+        transform: scale(1.02)
+    }
+
+    .course-instruction {
+        text-align: center;
+        font-weight: 600;
+        color: #005f73;
+        margin: .5rem 0 1rem;
+    }
+
+}
+
+/*---------- modal dialog ----------*/
+
+dialog {
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
 }

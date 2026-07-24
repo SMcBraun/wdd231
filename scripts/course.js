@@ -82,6 +82,7 @@ const courses = [
 
 const courseCards = document.querySelector("#course-cards");
 const credits = document.querySelector("#credits");
+const courseDetails = document.querySelector("#course-details");
 
 function displayCourses(courseList) {
     courseCards.innerHTML = "";
@@ -94,13 +95,46 @@ function displayCourses(courseList) {
             card.classList.add("completed");
         }
 
-        card.textContent = `${course.subject} ${course.number}`;
+        card.innerHTML = `
+            <h3>${course.completed ? "✔" : "📘"} ${course.subject} ${course.number}</h3>
+            <p>${course.title}</p>
+        `;
+
+        card.addEventListener("click", () => {
+            displayCourseDetails(course);
+        });
+
         courseCards.appendChild(card);
     });
 
     const totalCredits = courseList.reduce((total, course) => total + course.credits, 0);
     credits.textContent = `Total Credits: ${totalCredits}`;
 }
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits:</strong> ${course.credits}</p>
+        <p><strong>Certificate:</strong> ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies:</strong> ${course.technology.join(", ")}</p>
+    `;
+
+    courseDetails.showModal();
+
+    document.querySelector("#closeModal").addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
+
+courseDetails.addEventListener("click", event => {
+    if (event.target === courseDetails) {
+        courseDetails.close();
+    }
+});
+
 
 document.querySelector("#all").addEventListener("click", () => {
     displayCourses(courses);
