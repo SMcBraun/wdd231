@@ -202,9 +202,9 @@
             "image title"
             "image address"
             "image description"
-            "image button";
+            "image button"
             grid-template-columns: minmax(190px, 2fr) minmax(220px, 3fr);
-        grid-template-rows: auto auto 1fr auto;
+        frid-template-rows: auto atuo 1fr auto;
     }
 
     .discover-card h2 {

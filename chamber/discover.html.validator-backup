@@ -34,7 +34,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 
-    <!--STYLESHEETS-->
+    <!--------STYLESHEETS---->
 
 
     <link rel="stylesheet" href="styles/small.css">
@@ -93,7 +93,7 @@
 
         <aside id="visit-message" aria-label="Visitor information"></aside>
 
-        <!--JAVASCRIPT WILL BUILD THE EIGHT DISCOVER CARD HERE-->
+        <!--JAVASCRIPT WILL BUILD THE EIGHT DISCOVER CARD HERE--->
 
         <section id="discover-cards" class="discover-grid" aria-label="Waianace places of interest"></section>
 
@@ -139,7 +139,7 @@
 
 
         <div class="development-info">
-            <p>WDD 231 Class Project</p>
+            <p> </span>WDD 231 Class Project</p>
             <p>Sina McBraun</p>
             <p>
                 &copy; <span id="currentYear"></span>
