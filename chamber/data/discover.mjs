@@ -22,7 +22,7 @@ export const discoverPlaces = [
 
     },
     {
-        name: "Ka'ena Point State Par",
+        name: "Ka'ena Point State Park",
         address: "15-789 Mynah Street, Waianae , HI 96792",
         image: "kaena-point.webp",
         description:
@@ -40,7 +40,7 @@ export const discoverPlaces = [
 
     },
     {
-        name: "Kaneana Cave",
+        name: "Makua Cave",
         address: "89-6789 Ulua Highway, Waianae , HI 96792",
         image: "kaneana-cave.webp",
         description:
