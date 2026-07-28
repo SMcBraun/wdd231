@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Waianae | Waianae Chamber of Commerce</title>
+
+
+    <meta name="description" content="Experience our historic landmarks, iconic beaches, and local flavor.">
+    <meta name="author" content="Sina McBraun">
+
+
+    <!-- OPEN GRAPH SOCIAL MEDIA -->
+
+    <meta property="og:title" content="Discover Waianae">
+    <meta property="og:description"
+        content="Experience legendary beaches, historic cultural sites, vibrant local eateries, and welcoming community spaces.">
+    <meta property="og:image" content="https://smcbraun.github.io/wdd231/chamber/images/logo.svg">
+    <meta property="og:url" content="https://smcbraun.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+
+    <!-- FAVICON -->
+
+    <link rel="icon" href="images/waianae-favicon.ico">
+
+    <!-- GOOGLE FONTS-->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--------STYLESHEETS---->
+
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
+
+
+
+    <!-- JAVASCRIPT  -->
+
+    <script type="module" src="scripts/discover.js"></script>
+    <script src="scripts/date.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="images/logo.svg" alt="Waianae Chamber of Commerce Logo" width="64" height="64">
+
+        <span>Waianae Chamber of Commerce</span>
+
+        <button id="ham-btn" class="hamburger" type="button" aria-label="Open Navigation menu"></button>
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav id="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="discover-main">
+
+        <h1>Discover Waianae</h1>
+
+
+        <p class="discover-introduction">
+            Discover the magic of Waianae, a vibrant coastal paradise where you can live, work, and thrive.
+            Explore legendary shores, rich historic landmarks, and stunning natural wonders that make this
+            town an unforgettable place to visit and call home.
+        </p>
+
+        <!--VISITOR MESSAGE-->
+
+        <aside id="visit-message" aria-label="Visitor information"></aside>
+
+        <!--JAVASCRIPT WILL BUILD THE EIGHT DISCOVER CARD HERE--->
+
+        <section id="discover-cards" class="discover-grid" aria-label="Waianace places of interest"></section>
+
+
+    </main>
+
+    <!-- FOOTER -->
+
+
+    <footer>
+        <div class="chamber-contact">
+            <p><strong>Waianae Chamber of Commerce</strong></p>
+            <p>12-3456 Makaha Town Circle
+            <p>Waianae, Hawaii 96792
+            <p>info@waianaechambercc.org
+            <p>(808) 808-5678</p>
+        </div>
+
+
+
+
+        <!-- SOCIAL MEDIA -->
+
+
+        <div class="social">
+
+            <a href="https://www.twittercom" target="_blank" rel="noopener">
+                <img src="images/twitter.svg" alt="Twitter" width="42" height="42">
+            </a>
+
+
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="42" height="42">
+            </a>
+
+            <a href="https://www.facebook.com" target="_blank" rel="noopener">
+                <img src="images/facebook.svg" alt="Facebook" width="42" height="42">
+            </a>
+
+        </div>
+
+        <!-- DEVELOPMENT INFO-->
+
+
+        <div class="development-info">
+            <p> </span>WDD 231 Class Project</p>
+            <p>Sina McBraun</p>
+            <p>
+                &copy; <span id="currentYear"></span>
+                Waianae Chamber of Commerce
+            </p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
