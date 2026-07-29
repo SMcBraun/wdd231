@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
+    /*-------------Mobile Navigation----------------*/
+
+    const hamburgerButton = document.querySelector("#ham-btn");
+    const navigation = document.querySelector("#nav-bar");
+
+    if (hamburgerButtton && navigation) {
+        hamburgerButtton.addEventListener("click", () => {
+            hamburgerButton.classList.toggle("show");
+            navigation.classList.toggle("show");
+
+        });
+    }
+
+
     /*--------------1. Set Hidden timestamp Value-----------------*/
     const timestampInput = document.getElementById("timestamp");
     if (timestampInput) {
