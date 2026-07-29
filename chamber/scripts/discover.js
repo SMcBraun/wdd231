@@ -3,6 +3,24 @@
     PURPOSE: Displays the Waianae Discover cards and visit message.
 =================================================================*/
 
+
+/*----------MOBILE NAVGIATION---------*/
+const hamburgerButton = document.querySelector("#ham-btn");
+    const navigation = document.querySelector("#nav-bar");
+
+    if (hamburgerButton && navigation) {
+        hamburgerButton.addEventListener("click", () => {
+            hamburgerButton.classList.toggle("show");
+            navigation.classList.toggle("open");
+
+        });
+    }
+
+
+
+
+
+
 import { discoverPlaces } from "../data/discover.mjs";
 
 /*--------------- DISCOVER CARD CONTAINER ---------------*/

@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburgerButton = document.querySelector("#ham-btn");
     const navigation = document.querySelector("#nav-bar");
 
-    if (hamburgerButtton && navigation) {
-        hamburgerButtton.addEventListener("click", () => {
+    if (hamburgerButton && navigation) {
+        hamburgerButton.addEventListener("click", () => {
             hamburgerButton.classList.toggle("show");
-            navigation.classList.toggle("show");
+            navigation.classList.toggle("open");
 
         });
     }
