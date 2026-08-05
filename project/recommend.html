@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Recommend a Talk | General Conference Study Companion</title>
+
+    <meta name="description"
+        content="Recommend a General Conference talk or topic that may help another learner find hope, peace, strength, or direction.">
+
+    <meta name="author" content="Sina McBraun">
+
+    <meta property="og:title"
+        content="Recommend a General Conference Talk">
+
+    <meta property="og:description"
+        content="Share a General Conference message that stayed with you.">
+
+    <meta property="og:type"
+        content="website">
+
+    <meta property="og:url"
+        content="https://smcbraun.github.io/wdd231/project/recommend.html">
+
+    <link rel="icon"
+        href="images/favicon.svg"
+        type="image/svg+xml">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="styles/style.css">
+
+    <script type="module"
+        src="scripts/main.js"></script>
+</head>
+
+<body>
+
+    <!--==================================================
+        ACCESSIBILITY LINK
+    ===================================================-->
+    <a class="skip-link"
+        href="#main-content">
+        Skip to main content
+    </a>
+
+    <!--==================================================
+        HEADER AND NAVIGATION
+    ===================================================-->
+    <header class="site-header">
+
+        <div class="header-content">
+
+            <a class="site-brand"
+                href="index.html">
+
+                <span class="brand-mark"
+                    aria-hidden="true">
+                    1
+                </span>
+
+                <span class="brand-text">
+                    <strong>One Truth</strong>
+                    <small>General Conference Study Companion</small>
+                </span>
+
+            </a>
+
+            <button id="menu-button"
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation">
+
+                <span aria-hidden="true">
+                    ☰
+                </span>
+
+            </button>
+
+            <nav id="primary-navigation"
+                class="primary-navigation"
+                aria-label="Primary navigation">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="talks.html">
+                    Study
+                </a>
+
+                <a class="active"
+                    href="recommend.html"
+                    aria-current="page">
+                    Recommend
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!--==================================================
+        MAIN CONTENT
+    ===================================================-->
+    <main id="main-content">
+
+        <!--==================================================
+            PAGE INTRODUCTION
+        ===================================================-->
+        <section class="page-intro section-container">
+
+            <p class="eyebrow">
+                Share one meaningful message
+            </p>
+
+            <h1>
+                What General Conference talk stayed with you?
+            </h1>
+
+            <p>
+                Recommend a talk or topic that brought you peace,
+                hope, direction, strength, or a desire to change.
+            </p>
+
+        </section>
+
+        <!--==================================================
+            FORM SECTION
+        ===================================================-->
+        <section class="form-section section-container">
+
+            <div class="form-message">
+
+                <p class="eyebrow">
+                    Why your recommendation matters
+                </p>
+
+                <h2>
+                    One message may help another learner.
+                </h2>
+
+                <p>
+                    General Conference talks often become memorable
+                    because they answer a real need at the right time.
+                    Share what helped the message remain with you.
+                </p>
+
+                <blockquote>
+                    One remembered truth may become the answer
+                    someone else has been searching for.
+                </blockquote>
+
+            </div>
+
+            <form class="recommend-form"
+                method="get"
+                action="thanks.html">
+
+                <fieldset>
+
+                    <legend>
+                        About You
+                    </legend>
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input id="name"
+                        name="name"
+                        type="text"
+                        autocomplete="name"
+                        required>
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        required>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>
+                        Talk Recommendation
+                    </legend>
+
+                    <label for="talk-title">
+                        Talk Title
+                    </label>
+
+                    <input id="talk-title"
+                        name="talk"
+                        type="text"
+                        required>
+
+                    <label for="speaker">
+                        Speaker
+                    </label>
+
+                    <input id="speaker"
+                        name="speaker"
+                        type="text"
+                        required>
+
+                    <label for="conference">
+                        Conference
+                    </label>
+
+                    <input id="conference"
+                        name="conference"
+                        type="text"
+                        placeholder="Example: October 2024"
+                        required>
+
+                    <label for="topic">
+                        Main Topic
+                    </label>
+
+                    <select id="topic"
+                        name="topic"
+                        required>
+
+                        <option value="">
+                            Select a topic
+                        </option>
+
+                        <option value="Peace">
+                            Peace
+                        </option>
+
+                        <option value="Hope">
+                            Hope
+                        </option>
+
+                        <option value="Jesus Christ">
+                            Jesus Christ
+                        </option>
+
+                        <option value="Prayer">
+                            Prayer
+                        </option>
+
+                        <option value="Repentance">
+                            Repentance
+                        </option>
+
+                        <option value="Revelation">
+                            Revelation
+                        </option>
+
+                        <option value="Covenants">
+                            Covenants
+                        </option>
+
+                        <option value="Discipleship">
+                            Discipleship
+                        </option>
+
+                        <option value="Service">
+                            Service
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                    <label for="reason">
+                        Why did this message stay with you?
+                    </label>
+
+                    <textarea id="reason"
+                        name="reason"
+                        rows="6"
+                        required></textarea>
+
+                </fieldset>
+
+                <button class="button primary-button"
+                    type="submit">
+                    Submit Recommendation
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!--==================================================
+        FOOTER
+    ===================================================-->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <p class="footer-brand">
+                    One Truth
+                </p>
+
+                <p>
+                    General Conference Study Companion
+                </p>
+
+            </div>
+
+            <nav class="footer-navigation"
+                aria-label="Footer navigation">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="talks.html">
+                    Study
+                </a>
+
+                <a href="attributions.html">
+                    Attributions
+                </a>
+
+            </nav>
+
+            <div class="footer-course">
+
+                <p>
+                    &copy;
+                    <span id="current-year"></span>
+                    Sina McBraun
+                </p>
+
+                <p>
+                    WDD 231 Individual Project
+                </p>
+
+                <p id="last-modified"></p>
+
+                <p>
+                    <a href="#"
+                        class="video-link">
+                        Project Video
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

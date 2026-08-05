@@ -1,0 +1,864 @@
+/*=========================================================
+  FILE: style.css
+  PURPOSE: Styles every page of the One Truth website.
+=========================================================*/
+
+/*---------- COLOR AND FONT VARIABLES ----------*/
+
+:root {
+    --deep-blue: #1f3a5f;
+    --dark-blue: #142940;
+    --warm-gold: #c89b3c;
+    --dark-gold: #8a6519;
+    --soft-cream: #f7f3e8;
+    --light-cream: #fffdf7;
+    --soft-sage: #dfe9df;
+    --dark-text: #1d2833;
+    --muted-text: #53606d;
+    --white: #ffffff;
+    --border: #d7d2c5;
+    --shadow: 0 8px 24px rgb(20 41 64 / 12%);
+    --heading-font: "Merriweather", Georgia, serif;
+    --body-font: "Lato", Arial, sans-serif;
+}
+
+/*---------- GLOBAL RESET ----------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--soft-cream);
+    color: var(--dark-text);
+    font-family: var(--body-font);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    color: var(--deep-blue);
+    font-family: var(--heading-font);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+.section-container {
+    width: min(1120px, calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 1rem;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    background: var(--warm-gold);
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/*---------- HEADER AND NAVIGATION ----------*/
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--deep-blue);
+    color: var(--white);
+    box-shadow: 0 4px 14px rgb(0 0 0 / 18%);
+}
+
+.header-content {
+    position: relative;
+    display: flex;
+    min-height: 78px;
+    width: min(1120px, calc(100% - 2rem));
+    margin-inline: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--warm-gold);
+    color: var(--dark-blue);
+    font-family: var(--heading-font);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-text strong {
+    font-family: var(--heading-font);
+    font-size: 1.05rem;
+}
+
+.brand-text small {
+    font-size: 0.72rem;
+}
+
+.menu-button {
+    border: 1px solid rgb(255 255 255 / 55%);
+    border-radius: 0.4rem;
+    background: transparent;
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
+.primary-navigation {
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    background: var(--dark-blue);
+}
+
+.primary-navigation.open {
+    display: flex;
+}
+
+.primary-navigation a {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(255 255 255 / 15%);
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus-visible,
+.primary-navigation a.active {
+    background: var(--warm-gold);
+    color: var(--dark-blue);
+}
+
+/*---------- SHARED TEXT AND BUTTONS ----------*/
+
+.eyebrow {
+    margin-bottom: 0.6rem;
+    color: var(--dark-gold);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.85rem 1.25rem;
+    border: 2px solid transparent;
+    border-radius: 0.45rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.primary-button {
+    background: var(--warm-gold);
+    color: var(--dark-blue);
+}
+
+.primary-button:hover,
+.primary-button:focus-visible {
+    background: var(--white);
+    border-color: var(--warm-gold);
+}
+
+.secondary-button {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.secondary-button:hover,
+.secondary-button:focus-visible {
+    background: var(--white);
+    color: var(--deep-blue);
+}
+
+.text-link {
+    color: var(--deep-blue);
+    font-weight: 700;
+}
+
+/*---------- HOME HERO ----------*/
+
+.hero {
+    display: grid;
+    min-height: 620px;
+    padding: 4rem max(1rem, calc((100% - 1120px) / 2));
+    background:
+        linear-gradient(rgb(20 41 64 / 88%), rgb(31 58 95 / 92%)),
+        var(--deep-blue);
+    color: var(--white);
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero h1 {
+    max-width: 780px;
+    color: var(--white);
+}
+
+.hero .eyebrow {
+    color: #f5cf79;
+}
+
+.hero-message {
+    max-width: 660px;
+    font-size: 1.1rem;
+}
+
+.site-promise {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin: 1.5rem 0;
+    color: #f5cf79;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.hero-truth {
+    max-width: 470px;
+    padding: 1.5rem;
+    border-left: 5px solid var(--warm-gold);
+    background: rgb(255 255 255 / 10%);
+    backdrop-filter: blur(4px);
+}
+
+.truth-label {
+    color: #f5cf79;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-truth blockquote {
+    margin: 0;
+    font-family: var(--heading-font);
+    font-size: 1.3rem;
+}
+
+/*---------- NEED CARDS ----------*/
+
+.needs-section {
+    padding-block: 4rem;
+}
+
+.needs-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.need-card {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--light-cream);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.need-card:hover,
+.need-card:focus-visible {
+    transform: translateY(-5px);
+    border-color: var(--warm-gold);
+}
+
+.need-icon {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+}
+
+/*---------- JOURNEY SECTION ----------*/
+
+.journey-section {
+    padding-block: 4rem;
+    background: var(--soft-sage);
+}
+
+.journey-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.journey-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.3rem;
+    border-left: 5px solid var(--warm-gold);
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.journey-number {
+    color: var(--warm-gold);
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/*---------- FEATURED SECTION ----------*/
+
+.featured-section {
+    padding-block: 4rem;
+}
+
+.featured-card {
+    display: grid;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.featured-copy,
+.featured-quote {
+    padding: 2rem;
+}
+
+.featured-quote {
+    display: grid;
+    background: var(--deep-blue);
+    color: var(--white);
+    place-content: center;
+}
+
+.featured-quote span {
+    color: var(--warm-gold);
+    font-family: var(--heading-font);
+    font-size: 5rem;
+    line-height: 0.6;
+}
+
+.featured-quote p {
+    margin: 0;
+    font-family: var(--heading-font);
+    font-size: 1.35rem;
+}
+
+/*---------- PROGRESS SECTION ----------*/
+
+.progress-section {
+    padding-block: 4rem;
+    background: var(--deep-blue);
+    color: var(--white);
+}
+
+.progress-section h2,
+.progress-section .eyebrow {
+    color: var(--white);
+}
+
+.progress-content {
+    display: grid;
+    gap: 2rem;
+}
+
+.progress-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.progress-stat {
+    padding: 1.2rem;
+    border: 1px solid rgb(255 255 255 / 25%);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.progress-stat strong {
+    display: block;
+    color: #f5cf79;
+    font-family: var(--heading-font);
+    font-size: 2rem;
+}
+
+.progress-stat span {
+    font-size: 0.9rem;
+}
+
+/*---------- CLOSING SECTION ----------*/
+
+.closing-section {
+    padding-block: 4rem;
+}
+
+.closing-content {
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+/*---------- STUDY PAGE ----------*/
+
+.page-intro {
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.page-intro p:last-child {
+    max-width: 720px;
+    margin-inline: auto;
+}
+
+.study-tools {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.study-tools label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--deep-blue);
+    font-weight: 700;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--border);
+    border-radius: 0.4rem;
+}
+
+#search-input:focus {
+    border-color: var(--deep-blue);
+    outline: 3px solid rgb(31 58 95 / 18%);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.filter-button {
+    padding: 0.55rem 0.85rem;
+    border: 2px solid var(--deep-blue);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--deep-blue);
+    font-weight: 700;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible,
+.filter-button.active {
+    background: var(--deep-blue);
+    color: var(--white);
+}
+
+.results-message {
+    min-height: 1.5rem;
+    margin: 1rem 0 0;
+    color: var(--muted-text);
+}
+
+.talks-section {
+    padding-block: 3rem 4rem;
+}
+
+.talks-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.talk-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-top: 6px solid var(--warm-gold);
+    border-radius: 0.7rem;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.talk-card h3 {
+    font-size: 1.35rem;
+}
+
+.talk-need {
+    color: var(--dark-gold);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.talk-summary {
+    flex-grow: 1;
+}
+
+.talk-source {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.talk-source p {
+    margin-bottom: 0.25rem;
+}
+
+.talk-actions {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.talk-actions button {
+    padding: 0.7rem;
+    border: 2px solid var(--deep-blue);
+    border-radius: 0.4rem;
+    background: var(--white);
+    color: var(--deep-blue);
+    font-weight: 700;
+}
+
+.talk-actions button:hover,
+.talk-actions button:focus-visible {
+    background: var(--deep-blue);
+    color: var(--white);
+}
+
+.details-button {
+    background: var(--deep-blue) !important;
+    color: var(--white) !important;
+}
+
+/*---------- MODAL DIALOG ----------*/
+
+.talk-dialog {
+    width: min(680px, calc(100% - 2rem));
+    max-height: 88vh;
+    padding: 2rem;
+    border: 0;
+    border-radius: 0.75rem;
+    background: var(--light-cream);
+    box-shadow: 0 16px 50px rgb(0 0 0 / 35%);
+}
+
+.talk-dialog::backdrop {
+    background: rgb(10 20 32 / 75%);
+}
+
+.dialog-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--deep-blue);
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.dialog-section {
+    margin-top: 1.4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+}
+
+/*---------- FOOTER ----------*/
+
+.site-footer {
+    padding-block: 2.5rem;
+    background: var(--dark-blue);
+    color: var(--white);
+}
+
+.footer-content {
+    display: grid;
+    width: min(1120px, calc(100% - 2rem));
+    margin-inline: auto;
+    gap: 1.5rem;
+}
+
+.footer-brand {
+    margin-bottom: 0.2rem;
+    color: #f5cf79;
+    font-family: var(--heading-font);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-navigation a {
+    color: var(--white);
+}
+
+.footer-course p {
+    margin-bottom: 0.3rem;
+}
+
+/*---------- TABLET VIEW ----------*/
+
+@media screen and (min-width: 650px) {
+
+    .needs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-card {
+        grid-template-columns: 1.4fr 0.8fr;
+    }
+
+    .progress-summary {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .talks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1.2fr 1fr 1fr;
+    }
+}
+
+/*---------- DESKTOP VIEW ----------*/
+
+@media screen and (min-width: 900px) {
+
+    .menu-button {
+        display: none;
+    }
+
+    .primary-navigation {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background: transparent;
+    }
+
+    .primary-navigation a {
+        border: 0;
+        border-radius: 0.35rem;
+    }
+
+    .hero {
+        grid-template-columns: 1.4fr 0.8fr;
+    }
+
+    .needs-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .journey-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .journey-card {
+        flex-direction: column;
+    }
+
+    .progress-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .talks-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/*---------- RECOMMENDATION FORM ----------*/
+
+.form-section {
+    display: grid;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.form-message,
+.recommend-form {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.form-message blockquote {
+    margin: 1.5rem 0 0;
+    padding-left: 1rem;
+    border-left: 5px solid var(--warm-gold);
+    color: var(--deep-blue);
+    font-family: var(--heading-font);
+    font-size: 1.15rem;
+}
+
+.recommend-form fieldset {
+    margin: 0 0 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+}
+
+.recommend-form legend {
+    padding-inline: 0.4rem;
+    color: var(--deep-blue);
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+.recommend-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+    color: var(--deep-blue);
+    font-weight: 700;
+}
+
+.recommend-form input,
+.recommend-form select,
+.recommend-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--border);
+    border-radius: 0.4rem;
+    background: var(--light-cream);
+}
+
+.recommend-form input:focus,
+.recommend-form select:focus,
+.recommend-form textarea:focus {
+    border-color: var(--deep-blue);
+    outline: 3px solid rgb(31 58 95 / 18%);
+}
+
+.recommend-form textarea {
+    resize: vertical;
+}
+
+@media screen and (min-width: 800px) {
+
+    .form-section {
+        grid-template-columns: 0.8fr 1.2fr;
+        align-items: start;
+    }
+}
+
+/*---------- FORM CONFIRMATION PAGE ----------*/
+
+.confirmation-section {
+    padding-bottom: 4rem;
+}
+
+.confirmation-card {
+    max-width: 760px;
+    margin-inline: auto;
+    padding: 2rem;
+    border-top: 6px solid var(--warm-gold);
+    border-radius: 0.75rem;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+#form-results {
+    margin-block: 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: var(--light-cream);
+}
+
+#form-results p {
+    margin-bottom: 0.75rem;
+}
