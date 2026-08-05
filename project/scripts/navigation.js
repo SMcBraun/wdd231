@@ -4,23 +4,20 @@
 =================================================================*/
 
 //HINT: This prepares the menu button and navigation links.
-export function setupNavigation()
-{
+export function setupNavigation() {
     const menuButton = document.querySelector("#menu-button");
     const navigation = document.querySelector("#primary-navigation");
 
     //HINT: This stops the function if the page does not contain the menu.
-    if (!menuButton || !navigation)
-    {
+    if (!menuButton || !navigation) {
         return;
     }
 
     //HINT: This opens or closes the navigation when the button is selected.
-    menuButton.addEventListener("click", function ()
-    {
+    menuButton.addEventListener("click", function () {
         navigation.classList.toggle("open");
 
-        const menuIsOpen = navigation.classList.contains("open");
+        const IsOpen = navigation.classList.contains("open");
 
         menuButton.setAttribute("aria-expanded", menuIsOpen);
     });

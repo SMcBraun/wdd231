@@ -25,15 +25,23 @@ const topic = parameters.get("topic");
 const reason = parameters.get("reason");
 
 //HINT: This displays the submitted form values on the page.
-formResults.innerHTML = `
-    <p><strong>Name:</strong> ${name}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    <p><strong>Talk:</strong> ${talk}</p>
-    <p><strong>Speaker:</strong> ${speaker}</p>
-    <p><strong>Conference:</strong> ${conference}</p>
-    <p><strong>Topic:</strong> ${topic}</p>
-    <p><strong>Why It Stayed with You:</strong> ${reason}</p>
-`;
+if (name)
+{
+    formResults.innerHTML = `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Talk:</strong> ${talk}</p>
+        <p><strong>Speaker:</strong> ${speaker}</p>
+        <p><strong>Conference:</strong> ${conference}</p>
+        <p><strong>Topic:</strong> ${topic}</p>
+        <p><strong>Why It Stayed with You:</strong> ${reason}</p>
+    `;
+}
+else
+{
+    formResults.innerHTML =
+        "<p>No recommendation information was submitted.</p>";
+}
 
 //HINT: These display the year and last modified date.
 currentYear.textContent = new Date().getFullYear();

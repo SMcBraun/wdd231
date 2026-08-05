@@ -8,12 +8,10 @@ const FAVORITES_KEY = "conferenceFavorites";
 const STUDIED_KEY = "conferenceStudied";
 
 //HINT: This gets the saved favorite talk IDs.
-export function getFavorites()
-{
+export function getFavorites() {
     const savedFavorites = localStorage.getItem(FAVORITES_KEY);
 
-    if (savedFavorites)
-    {
+    if (savedFavorites) {
         return JSON.parse(savedFavorites);
     }
 
@@ -21,12 +19,10 @@ export function getFavorites()
 }
 
 //HINT: This gets the saved studied talk IDs.
-export function getStudied()
-{
+export function getStudied() {
     const savedStudied = localStorage.getItem(STUDIED_KEY);
 
-    if (savedStudied)
-    {
+    if (savedStudied) {
         return JSON.parse(savedStudied);
     }
 
@@ -34,32 +30,31 @@ export function getStudied()
 }
 
 //HINT: This checks whether one talk is already saved as a favorite.
-export function isFavorite(talkId)
-{
+export function isFavorite(talkId) {
     const favorites = getFavorites();
 
     return favorites.includes(talkId);
 }
 
 //HINT: This checks whether one talk is already marked as studied.
-export function isStudied(talkId)
-{
+export function isStudied(talkId) {
     const studied = getStudied();
 
     return studied.includes(talkId);
 }
 
 //HINT: This adds or removes one talk from the favorite list.
-export function toggleFavorite(talkId)
-{
+export function toggleFavorite(talkId) {
     let favorites = getFavorites();
 
-    if (favorites.includes(talkId))
-    {
-        favorites = favorites.filter((id) => id !== talkId);
+    if (favorites.includes(talkId)) {
+        favorites = favorites.filter(removeFavorite);
+
+        function removeFavorite(id) {
+            return id !== talkId;
+        }
     }
-    else
-    {
+    else {
         favorites.push(talkId);
     }
 
@@ -70,16 +65,17 @@ export function toggleFavorite(talkId)
 }
 
 //HINT: This adds or removes one talk from the studied list.
-export function toggleStudied(talkId)
-{
+export function toggleStudied(talkId) {
     let studied = getStudied();
 
-    if (studied.includes(talkId))
-    {
-        studied = studied.filter((id) => id !== talkId);
+    if (studied.includes(talkId)) {
+        studied = studied.filter(removeStudied);
+
+        function removeStudied(id) {
+            return id !== talkId;
+        }
     }
-    else
-    {
+    else {
         studied.push(talkId);
     }
 

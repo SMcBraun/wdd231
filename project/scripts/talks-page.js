@@ -219,7 +219,7 @@ function openDialog(talkId)
     }
 
     dialogContent.innerHTML = `
-        <p class="eyebrow">
+        <p class="section-label">
             ${talk.question}
         </p>
 

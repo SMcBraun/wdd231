@@ -208,7 +208,7 @@ p {
 
 /*---------- SHARED TEXT AND BUTTONS ----------*/
 
-.eyebrow {
+.section-label {
     margin-bottom: 0.6rem;
     color: var(--dark-gold);
     font-size: 0.85rem;
@@ -244,17 +244,6 @@ p {
     border-color: var(--warm-gold);
 }
 
-.secondary-button {
-    border-color: var(--white);
-    color: var(--white);
-}
-
-.secondary-button:hover,
-.secondary-button:focus-visible {
-    background: var(--white);
-    color: var(--deep-blue);
-}
-
 .text-link {
     color: var(--deep-blue);
     font-weight: 700;
@@ -279,11 +268,11 @@ p {
     color: var(--white);
 }
 
-.hero .eyebrow {
+.hero .section-label {
     color: #f5cf79;
 }
 
-.hero-message {
+.hero-text {
     max-width: 660px;
     font-size: 1.1rem;
 }
@@ -307,7 +296,6 @@ p {
     padding: 1.5rem;
     border-left: 5px solid var(--warm-gold);
     background: rgb(255 255 255 / 10%);
-    backdrop-filter: blur(4px);
 }
 
 .truth-label {
@@ -377,7 +365,7 @@ p {
 }
 
 .journey-number {
-    color: var(--warm-gold);
+    color: var(--dark-gold);
     font-family: var(--heading-font);
     font-size: 1.5rem;
     font-weight: 700;
@@ -431,7 +419,7 @@ p {
 }
 
 .progress-section h2,
-.progress-section .eyebrow {
+.progress-section .section-label {
     color: var(--white);
 }
 
@@ -487,55 +475,6 @@ p {
 .page-intro p:last-child {
     max-width: 720px;
     margin-inline: auto;
-}
-
-.study-tools {
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    background: var(--white);
-    box-shadow: var(--shadow);
-}
-
-.study-tools label {
-    display: block;
-    margin-bottom: 0.4rem;
-    color: var(--deep-blue);
-    font-weight: 700;
-}
-
-#search-input {
-    width: 100%;
-    padding: 0.8rem;
-    border: 2px solid var(--border);
-    border-radius: 0.4rem;
-}
-
-#search-input:focus {
-    border-color: var(--deep-blue);
-    outline: 3px solid rgb(31 58 95 / 18%);
-}
-
-.filter-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-top: 1rem;
-}
-
-.filter-button {
-    padding: 0.55rem 0.85rem;
-    border: 2px solid var(--deep-blue);
-    border-radius: 999px;
-    background: var(--white);
-    color: var(--deep-blue);
-    font-weight: 700;
-}
-
-.filter-button:hover,
-.filter-button:focus-visible,
-.filter-button.active {
-    background: var(--deep-blue);
-    color: var(--white);
 }
 
 .results-message {
@@ -608,9 +547,9 @@ p {
     color: var(--white);
 }
 
-.details-button {
-    background: var(--deep-blue) !important;
-    color: var(--white) !important;
+.talk-actions .details-button {
+    background: var(--deep-blue);
+    color: var(--white);
 }
 
 /*---------- MODAL DIALOG ----------*/
