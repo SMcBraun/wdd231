@@ -1,6 +1,6 @@
 /*=========================================================
   FILE: style.css
-  PURPOSE: Styles every page of the One Truth website.
+  PURPOSE: Styles every page of the Conference Compass website.
 =========================================================*/
 
 /*---------- COLOR AND FONT VARIABLES ----------*/
@@ -800,4 +800,12 @@ p {
 
 #form-results p {
     margin-bottom: 0.75rem;
+}
+
+/*---------- MODERN-DAY APPLICATION CAPTION ----------*/
+
+.application-caption {
+    margin-bottom: 0.75rem;
+    color: var(--muted-text);
+    font-style: italic;
 }

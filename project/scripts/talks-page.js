@@ -242,7 +242,7 @@ function openDialog(talkId)
         <section class="dialog-section">
 
             <h3>
-                Live It Today
+                Modern-Day Application
             </h3>
 
             <p>
@@ -266,7 +266,7 @@ function openDialog(talkId)
         <section class="dialog-section">
 
             <h3>
-                Conference Message
+                Continue Your Study
             </h3>
 
             <p>
