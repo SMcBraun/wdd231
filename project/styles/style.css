@@ -217,6 +217,10 @@ p {
     text-transform: uppercase;
 }
 
+.journey-section .section-label {
+    color: #7d5a16;
+}
+
 .section-heading {
     max-width: 720px;
     margin: 0 auto 2rem;
@@ -698,6 +702,7 @@ p {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 /*---------- RECOMMENDATION FORM ----------*/
 
 .form-section {
