@@ -1,34 +1,49 @@
 /*=================================================================
-    FILE: talks.js
-    PURPOSE: Loads the General Conference talk data from JSON.
+    *FILE: talks.js
+    *PURPOSE: Loads the General Conference talk data from JSON.*
 =================================================================*/
 
-//HINT: This stores the talks after the JSON file loads.
+//HINT: This code makes a place to hold all my talks.
 let talks = [];
 
-//HINT: This loads and returns the talk data.
+//HINT: This code gets my talk information; 
+// async lets this function wait for information that take time to load, 
+// and export lets another file use it.
+
 export async function getTalkData()
 {
+    //HINT : TRY tells the program to try getting my talks.
     try
     {
-        //HINT: This asks the browser to get the local JSON file.
+        //HINT: "Fetch" gets my talks from the  JSON file;
+        // "await" waits until the talks are ready.
         const response = await fetch("data/talks.json");
 
-        //HINT: This changes the JSON response into JavaScript data.
+
+
+        //HINT: This code  changes the talk information so
+        // JavaScript can understand it.
         talks = await response.json();
 
-        //HINT: This sends the completed talk list back to the page.
+        //HINT: This code sends all the talk info to the page
         return talks;
     }
+    //HINT: If the talks dont load, "catch" handles the problem 
+    //so the page does not stop working.
     catch (error)
     {
-        //HINT: This returns an empty list if the data cannot load.
+        //HINT: This  code  tells the page there are no talks to show.
         return [];
     }
 }
 
-//HINT: This finds one talk that matches the selected ID.
+//HINT: This code find sthe one talk the person chose.
 export function findTalk(talkId)
 {
     return talks.find((talk) => talk.id === talkId);
 }
+
+
+//OPERATIONS SCOPE: Make a place for my talks → get my talks → wait for them →
+// make them understandable → send them to the page → handle a problem 
+// → find the talk the person chose.

@@ -3,6 +3,9 @@
     PURPOSE: Displays conference messages selected from the Home page.
 =================================================================*/
 
+
+//HINT: "import" brings code from another file into this file
+// so I can use it here.
 import { setupNavigation } from "./navigation.js";
 import { getTalkData, findTalk } from "./talks.js";
 import {
@@ -70,7 +73,8 @@ currentYear.textContent = new Date().getFullYear();
 lastModified.textContent =
     `Last modified: ${document.lastModified}`;
 
-//HINT: This loads the JSON data when the page opens.
+//HINT:This gets the talk information we just loaded
+//  and starts building my page.
 async function startPage()
 {
     talks = await getTalkData();
@@ -208,7 +212,9 @@ function displayTalks(talkList)
     addButtonEvents();
 }
 
-//HINT: This opens the modal for the selected message.
+//HINT: When someone chooses a talk, 
+// this finds that talk and opens its 
+// extra information.
 function openDialog(talkId)
 {
     const talk = findTalk(talkId);
@@ -226,20 +232,7 @@ function openDialog(talkId)
         <h2>
             ${talk.truth}
         </h2>
-
-        <section class="dialog-section">
-
-            <h3>
-                The 30-Second Message
-            </h3>
-
-            <p>
-                ${talk.summary}
-            </p>
-
-        </section>
-
-        <section class="dialog-section">
+<section class="dialog-section">
 
             <h3>
                 Modern-Day Application
@@ -319,6 +312,8 @@ function addButtonEvents()
 
     favoriteButtons.forEach(function (button)
     {
+        //HINT: These click events tell the buttons
+        // what to do when someone clicks them.
         button.addEventListener("click", function ()
         {
             const talkId =
@@ -350,3 +345,8 @@ closeDialogButton.addEventListener("click", function ()
 
 //HINT: This begins loading the page.
 startPage();
+
+
+//HINT: OPERATIONS SCOPE: I bring in my other code, get my talk 
+// information, go through the talks one at a time,
+//  build the cards, and make the buttons work.
