@@ -37,10 +37,11 @@ export async function getTalkData()
     }
 }
 
-//HINT: This code find sthe one talk the person chose.
+//HINT: This code finds the one talk the person chose.
 export function findTalk(talkId)
 {
     return talks.find((talk) => talk.id === talkId);
+    
 }
 
 
